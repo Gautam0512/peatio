@@ -27,11 +27,10 @@ services:
     - 6379
 
 steps:
-# Wait MySQL to be ready for taking connections.
-- name: wait-for-mysql
+- name: wait-for-services
   image: jwilder/dockerize
   commands:
-  - dockerize -wait tcp://database:3306 -timeout 1m
+  - dockerize -wait tcp://database:3306 -wait tcp://influxdb:8086 -wait tcp://rabbitmq:5672 -timeout 1m
 
 - name: init-influxdb
   image: influxdb:1.7.8
