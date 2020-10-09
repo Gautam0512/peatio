@@ -6,6 +6,12 @@ GIT
       rails (>= 4.1)
       vault (~> 0.14)
 
+GIT
+  remote: https://github.com/openware/ruby-jwt
+  revision: b4ddf9fcd842a3532b0d810a14ae3b5d4cee8577
+  specs:
+    jwt (2.3.0.dev)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -209,7 +215,6 @@ GEM
       faraday_middleware (~> 0.13.1)
       faye (~> 1.2)
       peatio (>= 2.4.2)
-    jwt (2.2.2)
     jwt-multisig (1.0.4)
       activesupport (>= 4.0)
       jwt (~> 2.2)
@@ -492,7 +497,7 @@ DEPENDENCIES
   influxdb (~> 0.7.0)
   irb
   irix (~> 2.6.0)
-  jwt (~> 2.2.0)
+  jwt!
   jwt-multisig (~> 1.0.0)
   jwt-rack (~> 0.1.0)
   kaminari (~> 1.2.1)
